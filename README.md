@@ -1,0 +1,2 @@
+# Quantum-Computing-Projects
+A series of computational projects in MATLAB simulating some of the fundamental processes in quantum computing, including measurement of quantum states and creation of qubit gates. The projects also contain simulations of some of the algorithms that have given this field such promise, such as the Grover search algorithm and Shor's factoring algorithm. Future additions to this project will include quantum error correcting algorithms and simulations of topological quantum computing.
