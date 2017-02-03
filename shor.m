@@ -47,7 +47,7 @@ else
             %integer and p is the period of the function mod(a^x, C). 
             
             %From this measured f, guess p until we find p that satisfies
-            %mod(a^p + 1, C) = 0. If p is odd or p is even and 
+            %mod(a^p - 1, C) = 0. If p is odd or p is even and 
             %mod(a^(p/2)+ 1, C) = 0, we must go back and choose a different
             %a.
            
