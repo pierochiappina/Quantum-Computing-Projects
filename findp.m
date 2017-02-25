@@ -1,6 +1,7 @@
 function pvec = findp(out)
 
 pvec = [];
+p = [];
 
 function frac = findfrac(out, n)
     %Uses method of repeating fractions to approximate 'out'
@@ -14,7 +15,6 @@ function frac = findfrac(out, n)
     else
         frac = 1/(intg + findfrac(rest, n-1));
     end
-    %
     
 end
 
@@ -29,11 +29,13 @@ for i = 1:10
     %Find the numbers s and p that correspond to the approximated fraction s/p
     
     s = round(s);
-    p = round(s/frac);
+    p = [p round(s/frac)];
     
-    if ~isnan(p)
-        pvec = [pvec ' ' num2str(s) '/' num2str(p) ' '];
-        %List possible values of s/p
+    %Now we make a list of possible values for s/p
+    if length(p)==1
+        pvec = [pvec ' ' num2str(s) '/' num2str(p(end)) ' '];
+    elseif ~isnan(p(end)) && p(end) ~= p(end-1)
+        pvec = [pvec ' ' num2str(s) '/' num2str(p(end)) ' '];
     end
 end
 
